@@ -1,5 +1,8 @@
 require_relative './concerns/method.rb'
 require_relative './artist.rb'
+require_relative './genre.rb'
+require_relative './music_importer.rb'
+require_relative './MusicLibraryController.rb'
 
 class Song
 
@@ -48,11 +51,7 @@ class Song
     self.new_from_filename(file).save
   end
 
-
-
 end
-#
-#
-# song1 = Song.create("The King of Carrot Flowers, Pt. One")
-# song2 = Song.create("In the Aeroplane Over the Sea")
-# print Song.find_or_create_by_name("other")
+
+obj = MusicLibraryController.new("./spec/fixtures/mp3s")
+obj.list_artists

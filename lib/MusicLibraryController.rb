@@ -29,9 +29,9 @@ class MusicLibraryController
     elsif input == 'play song'
       play_song
     end
-    until input == "exit"
-      call
-    end
+    # until input == "exit"
+    #   call
+    # end
   end
 
   def list_songs

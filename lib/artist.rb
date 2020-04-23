@@ -7,10 +7,10 @@ class Artist
   extend Concerns::Methods::ClassMethods,  Concerns::Findable
 
   def self.all
-    @@all.uniq
+    @@all
   end
 
-  def initialize(name, song = nil)
+  def initialize(name)
     @name = name
     @songs = []
   end

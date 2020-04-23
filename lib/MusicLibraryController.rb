@@ -29,7 +29,7 @@ class MusicLibraryController
     elsif input == 'play song'
       play_song
     end
-    while input != "exit"
+    until input == "exit"
       call
     end
   end

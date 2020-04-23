@@ -61,7 +61,7 @@ class MusicLibraryController
     else
       all_songs = obj.songs.sort{|a,b| a.name <=> b.name}
       all_songs.each_with_index do |song, index|
-        puts "#{index+1}. #{song.name} - #{genre.name}"
+        puts "#{index+1}. #{song.name} - #{song.genre.name}"
       end
     end
   end

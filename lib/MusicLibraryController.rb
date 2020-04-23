@@ -45,5 +45,12 @@ class MusicLibraryController
     end
   end
 
+  def list_genres
+    array = Genre.all.sorty{|a,b| a.name <=> b.name}
+    array.each_with_index do |genre, index|
+      puts "#{index + 1}. #{genre.name}"
+    end
+  end
+
 
 end

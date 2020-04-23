@@ -1,9 +1,6 @@
 class MusicLibraryController
   attr_accessor :path
   def initialize(path = './db/mp3s')
-    Song.destroy_all
-    Genre.destroy_all
-    Artist.destroy_all
     @path = path
     @library = MusicImporter.new(path).import
   end

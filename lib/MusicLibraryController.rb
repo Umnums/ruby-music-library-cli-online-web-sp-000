@@ -86,7 +86,7 @@ class MusicLibraryController
     index = input - 1
     array = Song.all.sort{|a,b| a.name <=> b.name}
     if input.between?(1,array.length)
-      puts "Playing #{array[index].name} by  #{array[index].artist.name}"
+      puts "Playing #{array[index].name} by #{array[index].artist.name}"
     end
   end
 
